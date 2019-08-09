@@ -42,15 +42,15 @@ gym_class1 = GymClass.new({
 
 booking1 = Booking.new({
   "member_id" => member1.id,
-  "class_id" => gym_class1.id
+  "gym_class_id" => gym_class1.id
   })
 
 booking2 = Booking.new({
   "member_id" => member2.id,
-  "class_id" => gym_class2.id
+  "gym_class_id" => gym_class2.id
   })
 
 booking1 = Booking.new({
   "member_id" => member3.id,
-  "class_id" => gym_class3.id
+  "gym_class_id" => gym_class3.id
   })
