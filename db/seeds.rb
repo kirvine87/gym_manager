@@ -3,6 +3,7 @@ require_relative("../models/gym_class.rb")
 require_relative("../models/member.rb")
 require("pry-byebug")
 
+Booking.delete_all()
 GymClass.delete_all()
 Member.delete_all()
 
@@ -71,6 +72,6 @@ booking1.save()
 booking2.save()
 booking3.save()
 
-  binding.pry
-
-  nil
+  # binding.pry
+  #
+  # nil
