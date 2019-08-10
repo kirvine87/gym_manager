@@ -50,7 +50,7 @@ gym_class1.save()
 gym_class2.save()
 gym_class3.save()
 
-gym_class1.delete()
+# gym_class1.delete()
 
 booking1 = Booking.new({
   "member_id" => member1.id,
