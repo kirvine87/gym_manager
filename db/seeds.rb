@@ -22,6 +22,8 @@ member1.save()
 member2.save()
 member3.save()
 
+
+
 gym_class1 = GymClass.new({
   "name" => "Spin",
   "timec" => 13.00,
