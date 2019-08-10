@@ -62,6 +62,8 @@ booking3 = Booking.new({
   "gym_class_id" => gym_class3.id
   })
 
+
+
   binding.pry
 
   nil
