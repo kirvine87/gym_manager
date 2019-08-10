@@ -24,6 +24,7 @@ member1.save()
 member2.save()
 member3.save()
 
+# member1.delete()
 
 
 gym_class1 = GymClass.new({
