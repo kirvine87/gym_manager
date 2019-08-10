@@ -72,6 +72,8 @@ booking1.save()
 booking2.save()
 booking3.save()
 
+# booking1.delete()
+
   # binding.pry
   #
   # nil
