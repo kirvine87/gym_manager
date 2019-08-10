@@ -69,6 +69,6 @@ booking3 = Booking.new({
 
 
 
-  # binding.pry
-  #
-  # nil
+  binding.pry
+
+  nil
