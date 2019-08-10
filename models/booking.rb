@@ -18,4 +18,12 @@ def save()
   @id = results.first()['id'].to_i()
 end
 
+def update()
+  sql = "UPDATE bookings
+  SET (gym_class_id, member_id) = ($1, $2)
+  WHERE id = $3"
+  values = [@gym_class_id, @member_id, @id]
+  SqlRunner.run( sql, values )
+end
+
 end
