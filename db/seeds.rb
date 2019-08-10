@@ -3,6 +3,8 @@ require_relative("../models/gym_class.rb")
 require_relative("../models/member.rb")
 require("pry-byebug")
 
+Member.delete_all()
+
 member1 = Member.new({
   "name" => "Seth Jacob",
   "membership" => "Premium"
