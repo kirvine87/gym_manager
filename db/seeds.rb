@@ -18,7 +18,9 @@ member3 = Member.new({
   "membership" => "Standard"
   })
 
-
+member1.save()
+member2.save()
+member3.save()
 
 gym_class1 = GymClass.new({
   "name" => "Spin",
@@ -26,13 +28,13 @@ gym_class1 = GymClass.new({
   "capacity" => 25
   })
 
-gym_class1 = GymClass.new({
+gym_class2 = GymClass.new({
   "name" => "Circuit",
   "timec" => 14.00,
   "capacity" => 20
   })
 
-gym_class1 = GymClass.new({
+gym_class3 = GymClass.new({
   "name" => "Zumba",
   "timec" => 16.00,
   "capacity" => 25
@@ -50,7 +52,7 @@ booking2 = Booking.new({
   "gym_class_id" => gym_class2.id
   })
 
-booking1 = Booking.new({
+booking3 = Booking.new({
   "member_id" => member3.id,
   "gym_class_id" => gym_class3.id
   })
