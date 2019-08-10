@@ -45,7 +45,9 @@ gym_class3 = GymClass.new({
   "capacity" => 25
   })
 
-
+gym_class1.save()
+gym_class2.save()
+gym_class3.save()
 
 booking1 = Booking.new({
   "member_id" => member1.id,
@@ -64,6 +66,6 @@ booking3 = Booking.new({
 
 
 
-  binding.pry
-
-  nil
+  # binding.pry
+  #
+  # nil
