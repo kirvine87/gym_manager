@@ -10,4 +10,12 @@ def initialize(options)
   @member_id = options['member_id'].to_i()
 end
 
-end 
+def save()
+  sql = "INSERT INTO bookings (gym_class_id, member_id)
+  VALUES ($1, $2) RETURNING id"
+  values = [@gym_class_id, @member_id]
+  results = SqlRunner.run(sql, values)
+  @id = results.first()['id'].to_i()
+end
+
+end

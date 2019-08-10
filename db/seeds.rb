@@ -67,7 +67,9 @@ booking3 = Booking.new({
   "gym_class_id" => gym_class3.id
   })
 
-
+booking1.save()
+booking2.save()
+booking3.save()
 
   binding.pry
 
