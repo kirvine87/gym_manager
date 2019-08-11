@@ -1,0 +1,20 @@
+<form action="/gymclasses/<%= @gclass.id %>" method="POST">
+  <label for="cname">Name:</label>
+  <input type="text" id="cname" name="name" value="<%=@gclass.name%>">
+  <br>
+  <br>
+  <label for="ctime">Time:</label>
+<select name="timec" id="ctime" value="<%=@gclass.timec%>">
+  <% for timec in @timesc %>
+  <option value="<%= timec %>"><%= timec %><%= timec %></option>
+  <% end %>
+</select>
+  <br>
+  <br>
+  <label for="cap">Capacity:</label>
+  <input type="text" id="cap" name="capacity" value="<%=@gclass.capacity%>">
+  <br>
+  <br>
+  <input type="submit" value="Edit">
+
+</form>

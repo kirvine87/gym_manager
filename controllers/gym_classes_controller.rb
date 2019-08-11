@@ -27,3 +27,10 @@ get '/gymclasses/:id/edit' do
   @gclass = GymClass.find(id)
   erb(:"gym_classes/edit")
 end
+
+#UPDATE
+post '/gymclasses/:id' do
+  gclass = GymClass.new(params)
+  gclass.update()
+  redirect('/gymclasses')
+end
