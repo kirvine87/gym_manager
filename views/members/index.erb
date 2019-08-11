@@ -1,0 +1,18 @@
+<h1>Members</h1>
+<a href="/members/new">Join</a>
+
+
+
+<% for member in @members %>
+<hr>
+<table>
+  <tr><p>Name: <%= member.name() %></p></tr>
+  <tr<p>Membership: <%= member.membership() %></p></tr>
+  <tr<p>ID: <%= member.id() %></p></tr>
+  <tr><a href="/members/<%= member.id%>/edit">Edit</a></tr>
+  <form action="/members/<%= member.id %>/delete" method="POST">
+  <input type="submit" value="Remove">
+  </form>
+</table>
+<hr>
+<% end %>

@@ -1,0 +1,17 @@
+<form action="/members" method="POST">
+
+  <label for="mname">Name:</label>
+  <input required type="text" id="mname" name="name">
+  <br>
+  <br>
+  <label for="mem">Membership:</label>
+<select name="membership" id="mem">
+  <% for membership in @memberships %>
+  <option value="<%= membership %>"><%= membership %></option>
+  <% end %>
+</select>
+  <br>
+  <br>
+  <input type="submit" value="Join">
+
+</form>
