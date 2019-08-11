@@ -19,3 +19,11 @@ post '/gymclasses' do
   gclass.save()
   redirect "/gymclasses"
 end
+
+#EDIT
+get '/gymclasses/:id/edit' do
+  id = params[:id].to_i()
+  @timesc = [13.00, 14.00, 16.00 ]
+  @gclass = GymClass.find(id)
+  erb(:"gym_classes/edit")
+end
