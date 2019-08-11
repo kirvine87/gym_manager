@@ -1,0 +1,21 @@
+<form action="/gymclasses" method="POST">
+
+  <label for="cname">Name:</label>
+  <input required type="text" id="cname" name="name">
+  <br>
+  <br>
+  <label for="ctime">Time:</label>
+<select name="timec" id="ctime">
+  <% for timec in @timesc %>
+  <option value="<%= timec %>"><%= timec %><%= timec %></option>
+  <% end %>
+</select>
+  <br>
+  <br>
+  <label for="cap">Capacity:</label>
+  <input required type="number" min="0" max="30" id="cap" name="capacity">
+  <br>
+  <br>
+  <input type="submit" value="New Class">
+
+</form>
