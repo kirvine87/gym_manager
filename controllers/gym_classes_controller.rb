@@ -34,3 +34,12 @@ post '/gymclasses/:id' do
   gclass.update()
   redirect('/gymclasses')
 end
+
+#DELETE
+post '/gymclasses/:id/delete' do
+  id = params[:id].to_i()
+  @gclass = GymClass.find(id)
+  @gclass.delete()
+  redirect('/gymclasses')
+  erb(:"gym_classes/index")
+end
