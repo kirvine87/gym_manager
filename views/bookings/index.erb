@@ -1,0 +1,8 @@
+<h1>Bookings</h1>
+
+<p><a href="/bookings/new">Book</a></p>
+
+<% for booking in @bookings %>
+  <h2><%= booking.gclass.name %> <%= booking.gclass.timec %>:</h2>
+  <p>Name:<%= booking.member.name %> ID: <%= booking.member.id %></p>
+<% end %>

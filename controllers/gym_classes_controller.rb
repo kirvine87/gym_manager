@@ -1,4 +1,6 @@
 require_relative('../models/gym_class.rb')
+require_relative('../models/member.rb')
+
 
 #INDEX
 get '/gymclasses' do
