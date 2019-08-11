@@ -1,0 +1,13 @@
+<h1>Classes</h1>
+
+<a href="/gym_classes/new">New</a>
+
+<% for gclass in @gclasses %>
+<hr>
+<table>
+  <tr><p>Name: <%= gclass.name() %></p></tr>
+  <tr<p>Time: <%= gclass.timec() %></p></tr>
+  <tr<p>Capacity: <%= gclass.capacity() %></p></tr>
+</table>
+<hr>
+<% end %>
