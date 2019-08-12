@@ -14,7 +14,7 @@
     Select a Class:
     <select name="gym_class_id">
       <% for gclass in @gclasses %>
-      <option value="<%= gclass.id %>"><%= gclass.name %></option>
+      <option value="<%= gclass.id %>"><%= gclass.name + " " + gclass.timec %></option>
       <% end %>
     </select>
   </label>

@@ -4,11 +4,11 @@ require_relative('./member.rb')
 class GymClass
 
   attr_reader :id, :name, :timec, :capacity
-
+#' '%.2f' % forces timec to format to 2 d.p
   def initialize(options)
     @id = options['id'].to_i() if options['id']
     @name = options['name']
-    @timec = options['timec'].to_f()
+    @timec = '%.2f' % options['timec'].to_f()
     @capacity = options['capacity'].to_i()
   end
 

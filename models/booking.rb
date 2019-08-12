@@ -38,7 +38,7 @@ class Booking
   end
 
   def self.all()
-    sql = "SELECT * FROM bookings"
+    sql = "SELECT * FROM bookings ORDER BY gym_class_id"
     results = SqlRunner.run(sql)
     return results.map { |booking| Booking.new(booking) }
   end
