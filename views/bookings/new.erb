@@ -16,7 +16,9 @@
     Select a Class:
     <select name="gym_class_id">
       <% for gclass in @gclasses %>
+      <% if Booking.count(gclass.id) < gclass.capacity %>
       <option value="<%= gclass.id %>"><%= gclass.name + " " + gclass.timec %></option>
+      <% end %>
       <% end %>
     </select>
   </label>
