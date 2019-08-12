@@ -7,13 +7,13 @@
   <label for="ctime">Time:</label>
 <select name="timec" id="ctime">
   <% for timec in @timesc %>
-  <option value="<%= timec %>"><%= timec %><%= timec %></option>
+  <option value="<%= timec %>"><%= timec %></option>
   <% end %>
 </select>
   <br>
   <br>
   <label for="cap">Capacity:</label>
-  <input required type="number" min="0" max="30" id="cap" name="capacity">
+  <input required type="number" min="1" max="30" id="cap" name="capacity">
   <br>
   <br>
   <input type="submit" value="New Class">
