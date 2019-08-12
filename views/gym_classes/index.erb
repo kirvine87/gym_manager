@@ -2,16 +2,27 @@
 
 <a href="/gymclasses/new">New</a>
 
-<% for gclass in @gclasses %>
-<hr>
 <table>
-  <tr><p>Name: <%= gclass.name() %></p></tr>
-  <tr<p>Time: <%= gclass.timec() %></p></tr>
-  <tr<p>Capacity: <%= gclass.capacity() %></p></tr>
-  <tr><a href="/gymclasses/<%= gclass.id%>/edit">Edit</a></tr>
-  <form action="/gymclasses/<%= gclass.id %>/delete" method="POST">
-  <input type="submit" value="Remove">
-  </form>
-</table>
-<hr>
+<tb>
+  <tr>
+    <th>Name</th>
+    <th>Time</th>
+    <th>Capacity</th>
+    <th>Details</th>
+    <th>Quit</th>
+  </tr>
+  <% for gclass in @gclasses %>
+  <tr>
+    <td><%= gclass.name() %></td>
+    <td><%= gclass.timec() %></td>
+    <td><%= gclass.capacity() %></td>
+    <td><a href="/gymclasses/<%= gclass.id%>/edit">Edit</a></td>
+    <td>
+    <form action="/gymclasses/<%= gclass.id %>/delete" method="POST">
+    <input type="submit" value="Remove">
+    </form>
+    </td>
+  </tr>
 <% end %>
+</tb>
+</table>
