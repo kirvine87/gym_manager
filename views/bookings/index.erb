@@ -6,6 +6,7 @@
     <th>Class</th>
     <th>Name</th>
     <th>ID</th>
+    <th>Cancel</th>
   </tr>
   <tb>
 <% for booking in @bookings %>
@@ -13,6 +14,11 @@
   <td><%= booking.gclass.name %> <%= booking.gclass.timec %></td>
   <td><%= booking.member.name %></td>
   <td><%= booking.member.id %></td>
+  <td>
+    <form action="/bookings/<%= booking.id %>/delete" method="POST">
+    <input type="submit" value="Cancel">
+    </form>
+  </td>
 </tr>
 <% end %>
 </tb>

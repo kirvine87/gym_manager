@@ -23,3 +23,12 @@ post '/bookings' do
   booking.save()
   redirect '/bookings'
 end
+
+#DELETE
+post '/bookings/:id/delete' do
+  id = params[:id].to_i()
+  @booking = Booking.find(id)
+  @booking.delete()
+  redirect '/bookings'
+  erb(:"bookings/index")
+end

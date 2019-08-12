@@ -2,10 +2,12 @@
 
 <form action="/bookings" method="post">
   <label>
-  Select a Member:
+    Select a Member:
     <select name="member_id">
       <% for member in @members %>
+      <% if member.membership == "Premium" %>
       <option value="<%= member.id %>"><%= member.name %></option>
+      <% end %>
       <% end %>
     </select>
   </label>
@@ -18,6 +20,5 @@
       <% end %>
     </select>
   </label>
-
   <input type='submit' value="Book">
 </form>
