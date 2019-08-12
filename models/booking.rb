@@ -66,4 +66,11 @@ class Booking
     return GymClass.new( results.first )
   end
 
+  def self.count(id)
+    sql = "SELECT count(*) FROM bookings WHERE gym_class_id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return results.first()['count'].to_i()
+  end
+
 end
