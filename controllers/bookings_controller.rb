@@ -14,6 +14,7 @@ end
 get '/bookings/new' do
   @members = Member.all()
   @gclasses = GymClass.all()
+  @sclasses = GymClass.sall()
   erb(:"bookings/new")
 end
 

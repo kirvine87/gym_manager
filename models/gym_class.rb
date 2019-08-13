@@ -60,4 +60,10 @@ class GymClass
     return results.map { |member| Member.new(member)}
   end
 
+  def self.sall()
+    sql = "SELECT * FROM gym_classes WHERE timec > 9.00 AND timec < 17.00"
+    results = SqlRunner.run(sql)
+    return results.map { |gym_class| GymClass.new(gym_class) }
+  end
+
 end

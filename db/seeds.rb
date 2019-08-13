@@ -19,7 +19,7 @@ member2 = Member.new({
 
 member3 = Member.new({
   "name" => "James McAvoy",
-  "membership" => "Standard"
+  "membership" => "Premium"
   })
 
 member1.save()

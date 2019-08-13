@@ -10,13 +10,13 @@ end
 
 #NEW
 get '/gymclasses/new' do
-  @timesc = [13.00, 14.00, 16.00 ]
+  @timesc = [9.00, 10.00, 11.00, 12.00, 13.00, 14.00, 16.00, 17.00, 18.00 ]
   erb(:"gym_classes/new")
 end
 
 #CREATE
 post '/gymclasses' do
-  @timesc = [13.00, 14.00, 16.00 ]
+  @timesc = [9.00, 10.00, 11.00, 12.00, 13.00, 14.00, 16.00, 17.00, 18.00 ]
   gclass = GymClass.new(params)
   gclass.save()
   redirect "/gymclasses"
@@ -25,7 +25,7 @@ end
 #EDIT
 get '/gymclasses/:id/edit' do
   id = params[:id].to_i()
-  @timesc = [13.00, 14.00, 16.00 ]
+  @timesc = [9.00, 10.00, 11.00, 12.00, 13.00, 14.00, 16.00, 17.00, 18.00 ]
   @gclass = GymClass.find(id)
   erb(:"gym_classes/edit")
 end
