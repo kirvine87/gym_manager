@@ -33,3 +33,9 @@ post '/bookings/:id/delete' do
   redirect '/bookings'
   erb(:"bookings/index")
 end
+
+#SORT BY TIME
+get '/bookings/sort' do
+  @bookings = Booking.sort()
+  erb(:"bookings/index")
+end

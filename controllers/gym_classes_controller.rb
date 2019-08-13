@@ -48,3 +48,9 @@ post '/gymclasses/:id/delete' do
   redirect('/gymclasses')
   erb(:"gym_classes/index")
 end
+
+#SORT BY TIME
+get '/gymclasses/sort' do
+  @gclasses = GymClass.sort()
+  erb(:"gym_classes/index")
+end

@@ -45,6 +45,12 @@ class GymClass
     return results.map { |gym_class| GymClass.new(gym_class) }
   end
 
+  def self.sort()
+    sql = "SELECT * FROM gym_classes ORDER BY timec"
+    results = SqlRunner.run(sql)
+    return results.map { |gym_class| GymClass.new(gym_class) }
+  end
+
   def self.find(id)
     sql = "SELECT * FROM gym_classes WHERE id = $1"
     values = [id]

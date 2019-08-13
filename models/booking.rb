@@ -1,4 +1,6 @@
 require_relative('../db/sql_runner')
+require_relative('./member.rb')
+require_relative('./gym_class.rb')
 
 class Booking
 
@@ -41,6 +43,12 @@ class Booking
     sql = "SELECT * FROM bookings ORDER BY gym_class_id"
     results = SqlRunner.run(sql)
     return results.map { |booking| Booking.new(booking) }
+  end
+
+  def self.sort()
+    sql = "SELECT * FROM bookings ORDER BY member_id"
+    results = SqlRunner.run(sql)
+    return results.map { |gym_class| Booking.new(gym_class) }
   end
 
   def self.find(id)
