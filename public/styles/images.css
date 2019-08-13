@@ -1,6 +1,11 @@
 h4 img {
+  border-radius: 0%;
   border-left: 10px solid Teal;
   border-right: 10px solid Teal;
   border-top: 50px solid Teal;
   border-bottom: 150px solid Teal;
+}
+
+img {
+  border-radius: 50%;
 }

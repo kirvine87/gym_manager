@@ -43,3 +43,9 @@ post '/members/:id/delete' do
   redirect('/members')
   erb(:"members/index")
 end
+
+#SORT BY NAME
+get '/members/sort' do
+  @members = Member.sort()
+  erb(:"members/index")
+end

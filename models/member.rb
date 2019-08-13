@@ -7,7 +7,7 @@ class Member
 
   def initialize(options)
     @id = options['id'].to_i() if options['id']
-    @name = options['name']
+    @name = options['name'].capitalize
     @membership = options['membership']
   end
 
@@ -40,6 +40,12 @@ class Member
 
   def self.all()
     sql = "SELECT * FROM members"
+    results = SqlRunner.run(sql)
+    return results.map { |member| Member.new(member) }
+  end
+
+  def self.sort()
+    sql = "SELECT * FROM members ORDER BY name"
     results = SqlRunner.run(sql)
     return results.map { |member| Member.new(member) }
   end

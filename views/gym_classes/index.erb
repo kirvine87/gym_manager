@@ -1,6 +1,11 @@
+<div class="backg">
+
 <h1>Classes</h1>
 
-<a href="/gymclasses/new">New</a>
+<form class="buttons" action="/gymclasses/new" method="GET">
+<input type="submit" value="New">
+</form>
+
 
 <table>
 <tb>
@@ -16,7 +21,9 @@
     <td><%= gclass.name() %></td>
     <td><%= gclass.timec() %></td>
     <td><%= gclass.capacity() %></td>
-    <td><a href="/gymclasses/<%= gclass.id%>/edit">Edit</a></td>
+    <td><form action="/gymclasses/<%= gclass.id%>/edit" method="GET">
+    <input type="submit" value="Edit">
+    </form></td>
     <td>
     <form action="/gymclasses/<%= gclass.id %>/delete" method="POST">
     <input type="submit" value="Remove">
@@ -26,3 +33,5 @@
 <% end %>
 </tb>
 </table>
+
+</div>
