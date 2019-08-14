@@ -3,7 +3,7 @@ h4 img {
   border-left: 10px solid Teal;
   border-right: 10px solid Teal;
   border-top: 50px solid Teal;
-  border-bottom: 150px solid Teal;
+  border-bottom: 110px solid Teal;
 }
 
 img {
@@ -11,9 +11,9 @@ img {
 }
 
 nav li img {
-  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: 2s ease-in-out;
 }
 
 nav li img:hover {
-  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
 }

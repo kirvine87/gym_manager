@@ -1,7 +1,15 @@
+table {
+  display: flex;
+}
+
 table, tr, td {
-  border: 1px solid black;
+  max-height: 300px;
+  overflow: scroll;
 }
 
 td {
   padding: 0.5em;
+}
+tr, td {
+    border: 1px solid black;
 }
