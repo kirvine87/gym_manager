@@ -23,7 +23,7 @@ Gym managers should be able to
 * View a list of classes
 * See the members that will be attending each class
 
-#### User Stories - Possible Extensions
+#### User Stories - Extensions
 
 | As a  | I want to be able to  | So that |
 |---|---|---|
